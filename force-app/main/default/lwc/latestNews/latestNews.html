@@ -1,0 +1,51 @@
+<template>
+	<template if:true={isContentReady}>
+		<div class="category-box slds-m-vertical_x-small slds-p-around_x-small">
+			<lightning-combobox
+				value={category}
+				placeholder="Select Category"
+				options={options}
+				onchange={handleCategoryChange}
+				variant="label-hidden"
+			>
+			</lightning-combobox>
+		</div>
+		<div class="news-box">
+			<template for:each={allnews} for:item="news" for:index="index">
+				<lightning-layout key={index.index} class="slds-card">
+					<lightning-layout-item size="12" padding="around-small" class="slds-m-right_x-small">
+						<div class="slds-grid slds-gutters">
+							<div class="slds-col slds-size_2-of-12">
+								<img src={news.imageUrl} alt="Loding" class="img-setup"/>
+							</div>
+							<div class="slds-col slds-size_10-of-12">
+								<div class="sldx-box slds-m-top_xx-small">
+									<lightning-formatted-text value={news.title} class="slds-text-heading_large">
+									</lightning-formatted-text>
+								</div>
+								<div class="sldx-box slds-m-top_xx-small">
+									<lightning-formatted-text value={news.content} class="slds-text-heading_medium">
+									</lightning-formatted-text>
+								</div>
+								<div class="sldx-box slds-m-top_xx-small slds-text-align_right slds-p-right_medium">
+									<lightning-formatted-url value={news.readMoreUrl} label="Read More" class="slds-text-heading_medium"></lightning-formatted-url>
+								</div>
+							</div>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+			</template>
+		</div>
+	</template>
+	<template if:true={isError}>
+		<div class="error-box">
+			<c-illustration
+				error-text="Something went wrong please try again"
+				is-link-type-text={isLinkTypeText}
+				link-click
+				onlinkclick={handleLinkClick}>
+			</c-illustration>
+		</div>
+	</template>
+	<c-spinner is-loding={isLoding}></c-spinner>
+</template>
