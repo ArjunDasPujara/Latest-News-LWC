@@ -7,3 +7,8 @@ This repository contains Salesforce SFDX based project to get the latest news. L
 ![](document/NewsLWC1.jpg)
 
 ![](document/NewsLWC2.jpg)
+
+
+# Built With
+* Lightning Web Components - Salesforce based web framework
+* Apex
