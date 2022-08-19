@@ -1,4 +1,16 @@
+/*
+	@Auther          :     Arjun Das
+	@BuiltDate       :     27 JUN 2022
+	@ModifiedBy      :     Arjun Das
+	@ModifiedDate    :     27 JUN 2022
+	@Description     :     A controller for get requreid data for latestNews LWC component.
+*/
+
 public class LatestNewsController {
+	/*
+	 * This Method is used to get the available category
+	 * @return LatestNewsController.NewsCategory Wapper.
+	 */
 	@AuraEnabled
 	public static List<LatestNewsController.NewsCategory> getNewsCategory() {
 		List<LatestNewsController.NewsCategory> newsCategoryList = new List<LatestNewsController.NewsCategory>();
@@ -19,6 +31,9 @@ public class LatestNewsController {
 		return newsCategoryList;
 	}
 
+	/**
+	 * NewsCategory Wapper
+	 */
 	public class NewsCategory {
 		@AuraEnabled
 		public String label {get; set;}
