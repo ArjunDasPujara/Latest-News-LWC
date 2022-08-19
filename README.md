@@ -8,7 +8,7 @@ This repository contains Salesforce SFDX based project to get the latest news. L
 
 ![](document/NewsLWC2.jpg)
 
-![](document/NewsLWC2.jpg)
+![](document/NewsLWC3.jpg)
 
 # Note
 Custom Metadata has been used to show all news category's available in component.
