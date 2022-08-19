@@ -3,5 +3,5 @@
     <description>News Category</description>
     <label>News Category</label>
     <pluralLabel>News Categorys</pluralLabel>
-    <visibility>Public</visibility>
+    <visibility>Protected</visibility>
 </CustomObject>
