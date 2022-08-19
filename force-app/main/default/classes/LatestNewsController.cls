@@ -16,12 +16,7 @@ public class LatestNewsController {
 		List<LatestNewsController.NewsCategory> newsCategoryList = new List<LatestNewsController.NewsCategory>();
 		
 		try {
-			List<News_Category__mdt> newCatogryList = [
-				SELECT MasterLabel,
-					DeveloperName
-				FROM News_Category__mdt
-				ORDER BY MasterLabel
-			];
+			List<News_Category__mdt> newCatogryList = News_Category__mdt.getAll().values();
 	
 			for(News_Category__mdt newsCategory : newCatogryList) {
 				LatestNewsController.NewsCategory newsCategoryVar = new LatestNewsController.NewsCategory();
