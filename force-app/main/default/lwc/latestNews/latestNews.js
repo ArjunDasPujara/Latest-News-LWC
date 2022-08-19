@@ -1,11 +1,12 @@
 import { LightningElement, track } from 'lwc';
 import getNewsCategorys from '@salesforce/apex/LatestNewsController.getNewsCategory';
+import READ_MORE from '@salesforce/label/c.ReadMoreLink';
+import SOMTHING_WENT_WRONG_ERROR from '@salesforce/label/c.SomethingWentWrongPleaseTryAgainError';
 
 const API_URL = 'https://inshorts.deta.dev/news?category=';
 
 export default class LatestNews extends LightningElement {
 	
-	@track
 	category = 'all';
 	isLoding = true;
 	isContentReady = false;
@@ -14,6 +15,11 @@ export default class LatestNews extends LightningElement {
 	
 	allnews = [];
 	options = [];
+
+	labels = {
+		READ_MORE,
+		SOMTHING_WENT_WRONG_ERROR
+	}
 
 	async connectedCallback() {
 		await this.getNewsCategorys();

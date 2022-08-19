@@ -28,7 +28,7 @@
 									</lightning-formatted-text>
 								</div>
 								<div class="sldx-box slds-m-top_xx-small slds-text-align_right slds-p-right_medium">
-									<lightning-formatted-url value={news.readMoreUrl} label="Read More" class="slds-text-heading_medium"></lightning-formatted-url>
+									<lightning-formatted-url value={news.readMoreUrl} label={labels.READ_MORE} class="slds-text-heading_medium"></lightning-formatted-url>
 								</div>
 							</div>
 						</div>
@@ -40,7 +40,7 @@
 	<template if:true={isError}>
 		<div class="error-box">
 			<c-illustration
-				error-text="Something went wrong please try again"
+				error-text={labels.SOMTHING_WENT_WRONG_ERROR}
 				is-link-type-text={isLinkTypeText}
 				link-click
 				onlinkclick={handleLinkClick}>
