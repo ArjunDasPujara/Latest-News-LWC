@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ReadMoreLink</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Read More Link</shortDescription>
+        <value>Read More</value>
+    </labels>
+    <labels>
+        <fullName>SomethingWentWrongPleaseTryAgainError</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Something went wrong please try again</shortDescription>
+        <value>Something went wrong please try again.</value>
+    </labels>
+</CustomLabels>
